@@ -1,6 +1,6 @@
 package com.cogmento.pages;
 
-import com.beust.ah.A;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -68,5 +68,4 @@ public class HomePage extends BasePage {
         actions.moveToElement(leftNavBarMenu).build().perform();
         driver.findElement(By.xpath("//div[@class='menu-item-wrapper']/a[@href='/"+page+"']")).click();
     }
-
 }

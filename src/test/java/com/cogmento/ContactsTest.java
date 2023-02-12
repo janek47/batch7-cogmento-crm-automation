@@ -11,7 +11,7 @@ import java.util.HashMap;
 public class ContactsTest extends BaseTest{
 
     @Test(dataProvider = "contacts")
-    public void createContactPositive(HashMap<String,String> data) throws InterruptedException {
+    public void verifyContactPositive(HashMap<String,String> data) throws InterruptedException {
         Login login = new Login(driver, softAssert);
         Contacts contacts = new Contacts(driver, softAssert);
 
@@ -23,6 +23,7 @@ public class ContactsTest extends BaseTest{
 
     @DataProvider(name = "contacts")
     public Object[][] getContactsData(){
-        return new ExcelReader("src/main/resources/testData/CogmentoTestData.xlsx", "contacts").getData();
+       return  new ExcelReader("src/main/resources/testData/CogmentoTestData.xlsx", "contacts").getData();
+
     }
 }
